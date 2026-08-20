@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/static/css/main.cec72fbc.css",
-    "main.js": "/static/js/main.eaa8b8ca.js",
-    "static/js/453.bf0bffca.chunk.js": "/static/js/453.bf0bffca.chunk.js",
-    "static/media/Alatsi-Regular.ttf": "/static/media/Alatsi-Regular.8f3df35372bace9c8b65.ttf",
-    "static/media/Akshar-VariableFont_wght.ttf": "/static/media/Akshar-VariableFont_wght.2e82f356d33f03a67167.ttf",
-    "static/media/BellotaText-BoldItalic.ttf": "/static/media/BellotaText-BoldItalic.9c4a03d51149de49633f.ttf",
-    "static/media/BellotaText-Bold.ttf": "/static/media/BellotaText-Bold.feb03904ce527546dc90.ttf",
-    "static/media/BellotaText-LightItalic.ttf": "/static/media/BellotaText-LightItalic.9d786d2d6b79b5a1a6a0.ttf",
-    "static/media/BellotaText-Italic.ttf": "/static/media/BellotaText-Italic.b5d33c643898f29e214d.ttf",
-    "static/media/BellotaText-Regular.ttf": "/static/media/BellotaText-Regular.f71f4a56a427635b1872.ttf",
-    "static/media/BellotaText-Light.ttf": "/static/media/BellotaText-Light.46365049d0ea32d5cc51.ttf",
-    "static/media/Logo_shadow.svg": "/static/media/Logo_shadow.d7a4d261881ec01a39d0cf28e5571bea.svg",
-    "static/media/BebasNeue-Regular.ttf": "/static/media/BebasNeue-Regular.12e3683f9192436a7be8.ttf",
-    "static/media/Belleza-Regular.ttf": "/static/media/Belleza-Regular.cd161071bddd6206d791.ttf",
-    "index.html": "/index.html",
-    "main.cec72fbc.css.map": "/static/css/main.cec72fbc.css.map",
-    "main.eaa8b8ca.js.map": "/static/js/main.eaa8b8ca.js.map",
-    "453.bf0bffca.chunk.js.map": "/static/js/453.bf0bffca.chunk.js.map"
+    "main.css": "/sana/static/css/main.cec72fbc.css",
+    "main.js": "/sana/static/js/main.74390a2a.js",
+    "static/js/453.bf0bffca.chunk.js": "/sana/static/js/453.bf0bffca.chunk.js",
+    "static/media/Alatsi-Regular.ttf": "/sana/static/media/Alatsi-Regular.8f3df35372bace9c8b65.ttf",
+    "static/media/Akshar-VariableFont_wght.ttf": "/sana/static/media/Akshar-VariableFont_wght.2e82f356d33f03a67167.ttf",
+    "static/media/BellotaText-BoldItalic.ttf": "/sana/static/media/BellotaText-BoldItalic.9c4a03d51149de49633f.ttf",
+    "static/media/BellotaText-Bold.ttf": "/sana/static/media/BellotaText-Bold.feb03904ce527546dc90.ttf",
+    "static/media/BellotaText-LightItalic.ttf": "/sana/static/media/BellotaText-LightItalic.9d786d2d6b79b5a1a6a0.ttf",
+    "static/media/BellotaText-Italic.ttf": "/sana/static/media/BellotaText-Italic.b5d33c643898f29e214d.ttf",
+    "static/media/BellotaText-Regular.ttf": "/sana/static/media/BellotaText-Regular.f71f4a56a427635b1872.ttf",
+    "static/media/BellotaText-Light.ttf": "/sana/static/media/BellotaText-Light.46365049d0ea32d5cc51.ttf",
+    "static/media/Logo_shadow.svg": "/sana/static/media/Logo_shadow.15de01ed5a45a32df0938524a843de3c.svg",
+    "static/media/BebasNeue-Regular.ttf": "/sana/static/media/BebasNeue-Regular.12e3683f9192436a7be8.ttf",
+    "static/media/Belleza-Regular.ttf": "/sana/static/media/Belleza-Regular.cd161071bddd6206d791.ttf",
+    "index.html": "/sana/index.html",
+    "main.cec72fbc.css.map": "/sana/static/css/main.cec72fbc.css.map",
+    "main.74390a2a.js.map": "/sana/static/js/main.74390a2a.js.map",
+    "453.bf0bffca.chunk.js.map": "/sana/static/js/453.bf0bffca.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.cec72fbc.css",
-    "static/js/main.eaa8b8ca.js"
+    "static/js/main.74390a2a.js"
   ]
 }

@@ -1,1 +1,1 @@
-{"version":3,"file":"static/css/main.c36fe21a.css","mappings":"AAAA,KAGE,wBAAyB,CADzB,gBAAiB,CADjB,iBAGF","sources":["App.css"],"sourcesContent":[".App {\n  text-align: center;\n  min-height: 100vh;\n  background-color: #FFE3CC;\n}\n"],"names":[],"sourceRoot":""}
+{"version":3,"file":"static/css/main.0c388a2e.css","mappings":"AAAA,KAGE,wBAAyB,CADzB,gBAAiB,CADjB,iBAGF","sources":["App.css"],"sourcesContent":[".App {\r\n  text-align: center;\r\n  min-height: 100vh;\r\n  background-color: #FFE3CC;\r\n}\r\n"],"names":[],"sourceRoot":""}
