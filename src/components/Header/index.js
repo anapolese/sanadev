@@ -1,28 +1,28 @@
-import PropTypes from "prop-types";
+import { LogoArea } from "./LogoArea";
 import { NavGroup } from "./NavGroup";
+import {
+  NavBar,
+  PageHeader
+} from "./styles";
 
 export const Header = (  ) => {
   const leftLinks = [
-    { label: "HOME", href: "#home", active: true },
-    { label: "HISTÓRIA", href: "#historia" },
+    { title: "HOME", href: "/", active: true },
+    { title: "HISTÓRIA", href: "#historia" },
   ];
 
   const rightLinks = [
-    { label: "TRATAMENTOS", href: "#tratamentos" },
-    { label: "ATENDIMENTO", href: "#atendimento" },
+    { title: "TRATAMENTOS", href: "#tratamentos" },
+    { title: "ATENDIMENTO", href: "#atendimento" },
   ];
 
   return (
-    <header className="site-header">
-      <nav className="navbar">
+    <PageHeader className="site-header">
+      <NavBar className="navbar">
         <NavGroup links={leftLinks} />
-
+        <LogoArea />
         <NavGroup links={rightLinks} />
-      </nav>
-    </header>
+      </NavBar>
+    </PageHeader>
   );
-};
-
-Header.propTypes = {
-  logo: PropTypes.string.isRequired,
 };

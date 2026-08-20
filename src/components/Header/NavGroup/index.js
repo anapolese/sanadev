@@ -1,16 +1,17 @@
 import PropTypes from "prop-types";
 import { NavLink } from "../NavItem";
+import { NavGroupContainer } from "./styles";
 
-export const NavGroup = ( links ) => {
+export const NavGroup = ({ links }) => {
   return (
-    <div className="nav-group">
-      {links?.data?.map((link) => (
+    <NavGroupContainer id="nav-group-container" className="nav-group">
+      {links.map((link) => (
         <NavLink
           key={link.href}
           {...link}
         />
       ))}
-    </div>
+    </NavGroupContainer>
   );
 };
 

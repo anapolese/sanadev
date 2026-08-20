@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import { NavigationLink } from "./styles";
+import { Container, NavigationLink, Underline } from "./styles";
 
 export const NavLink = ({ 
   active = false,
@@ -8,13 +8,16 @@ export const NavLink = ({
   title,
   }) => {
   return (
-    <NavigationLink
-      onClick={onClickHandler}
-      href={href}
-      className={`nav-link-${active ? "active" : ""}`}
-    >
-      {title}
-    </NavigationLink>
+    <Container id={`container-${title}`}>
+      <NavigationLink
+        onClick={onClickHandler}
+        href={href}
+        className={`nav-link-${active ? "active" : ""}`}
+      >
+        {title}
+        <Underline className="underline" />
+      </NavigationLink>
+    </Container>
   );
 };
 
