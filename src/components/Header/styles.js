@@ -13,13 +13,11 @@ const NavBar = styled.nav`
 `;
 
 const PageHeader = styled.header`
-  --header-height: 180px;
-
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  z-index: 1000;
+  z-index: 2;
 
   display: flex;
   justify-content: center;

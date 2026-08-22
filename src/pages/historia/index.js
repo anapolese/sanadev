@@ -1,5 +1,5 @@
-import { HistoriaContainer } from './styles';
-import { HistoriaBanner } from '../../components/HistoriaBanner';
+import { PageContainer } from '../../components/Container';
+import { SplitedBanner } from '../../components/SplitedBanner';
 import { capitalizeAll } from "../../utils/utils";
 
 export const Historia = () => {
@@ -15,16 +15,16 @@ export const Historia = () => {
   ];
   
   return (
-    <HistoriaContainer id="historia">
-      <HistoriaBanner 
+    <PageContainer id="historia">
+      <SplitedBanner 
         imgDescription={imgDescription}
-        title={capitalizeAll(title)}
+        text={capitalizeAll(title)}
         paragraph1={paragraph1}
         paragraph2={paragraph2}
         paragraph3={paragraph3}
         links={links}
       />
-    </HistoriaContainer>
+    </PageContainer>
   );
 };
 

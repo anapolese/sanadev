@@ -70,6 +70,7 @@ const GlobalStyle = createGlobalStyle `
     overflow-x: hidden;
     scroll-behavior: smooth;
     font-family: 'Alatsi', sans-serif;
+    min-height: 100vh;
   }
 `;
 

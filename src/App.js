@@ -1,7 +1,10 @@
 import { useEffect, useState } from 'react';
+import Atendimento from './pages/atendimento';
+import Footer from './components/Footer';
 import Header from './components/Header';
 import Historia from './pages/historia';
 import Home from './pages/home';
+import Tratamentos from './pages/tratamentos';
 import LoaderWidget from './components/LoaderWidget';
 import WhatsAppLink from './components/WhatsAppLink';
 import { isLoading, onDomContentLoaded } from './utils/utils';
@@ -25,6 +28,9 @@ function App() {
       <Header />
       <Home />
       <Historia />
+      <Tratamentos />
+      <Atendimento />
+      <Footer />
       <WhatsAppLink />
     </div>
   );

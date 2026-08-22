@@ -7,6 +7,7 @@ export const ImagePanel = styled.div`
   background-image: url(${Image});
   background-size: cover;
   background-position: center;
+  border-radius: 0px 15px 15px 0px;
 `;
 
 export const ContentPanel = styled.div`
@@ -26,21 +27,13 @@ export const ContentWrapper = styled.div`
   gap: 20px;
 `;
 
-export const Title = styled.h2`
-  margin-bottom: 15px;
-  color: ${({ theme }) => theme.colors.dark.brown0};
-  font-family: ${({ theme }) => theme.fonts.main};
-  font-size: 46px;
-  line-height: 1.1;
-  font-weight: 400;
-`;
-
 export const Description = styled.p`
   margin: 0;
   color: ${({ theme }) => theme.colors.dark.brown2};
   font-family: ${({ theme }) => theme.fonts.description};
   font-size: 23px;
   line-height: 1.2;
+  width: 600px;
 `;
 
 export const LinksRow = styled.div`

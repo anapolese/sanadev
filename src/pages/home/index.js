@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { HomeContainer } from './styles';
+import { PageContainer } from '../../components/Container';
 import { WelcomeBanner } from '../../components/WelcomeBanner';
 
 export const Home = () => {
@@ -11,13 +11,13 @@ export const Home = () => {
   ];
 
   return (
-    <HomeContainer id="home">
+    <PageContainer id="home">
       <WelcomeBanner 
         title={title}
         subtitle={subtitle}
         links={links}
       />
-    </HomeContainer>
+    </PageContainer>
   );
 };
 

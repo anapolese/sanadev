@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const BannerContainer = styled.div`
+export const BannerContainer = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -10,7 +10,7 @@ const BannerContainer = styled.div`
   color: ${({ theme }) => theme.colors.dark.brown0};
 `;
 
-const BannerLinks = styled.div`
+export const BannerLinks = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -18,7 +18,7 @@ const BannerLinks = styled.div`
   margin-top: 24px;
 `;
 
-const BannerSection = styled.section`
+export const BannerSection = styled.section`
   width: 100%;
   grid-column: 1 / -1;
   display: flex;
@@ -28,7 +28,7 @@ const BannerSection = styled.section`
   padding: 40px;
 `;
 
-const BannerSubtitle = styled.p`
+export const BannerSubtitle = styled.p`
   margin: 12px 0 0;
   font-family: ${({ theme }) => theme.fonts.tertiary};
   font-size: 21px;
@@ -36,7 +36,7 @@ const BannerSubtitle = styled.p`
   line-height: 1.3;
 `;
 
-const BannerTitle = styled.h1`
+export const BannerTitle = styled.h1`
   margin: 0;
   font-family: ${({ theme }) => theme.fonts.secondary};
   font-size: 36px;
@@ -46,10 +46,7 @@ const BannerTitle = styled.h1`
   white-space: normal;
 `;
 
-export {
-  BannerContainer,
-  BannerLinks,
-  BannerSection,
-  BannerSubtitle,
-  BannerTitle,
-};
+export const ImgArea = styled.img`
+  width: 32px;
+  margin: 20px 0;
+`;

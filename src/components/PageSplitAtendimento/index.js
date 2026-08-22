@@ -1,54 +1,51 @@
 import PropTypes from 'prop-types';
-import { ButtonLink } from './Link';
 import {
   ContentPanel,
   ContentWrapper,
   Description,
+  ImageArea,
   ImagePanel,
   LinksRow,
-  Title,
 } from './styles';
 import { capitalizeAll } from '../../utils/utils';
+import { Map } from '../Map';
+import { Title } from '../Title';
+import { Subtitle } from '../Subtitle';
 
-export const HistoriaBanner = ({
+export const PageSplitAtendimento = ({
   imgDescription,
-  title,
+  imgSrc,
   paragraph1,
   paragraph2,
   paragraph3,
-  links = [],
+  subtitle,
+  title,
   }) => {
   return (
     <>
-      <ImagePanel aria-label={imgDescription} />
+      <ImagePanel aria-label={imgDescription}>
+        <ImageArea src={imgSrc} alt={imgDescription} />
+      </ImagePanel>
       <ContentPanel id="content-panel">
         <ContentWrapper id="content-wrapper">
-          <Title>{capitalizeAll(title)}</Title>
-
+          <Map />
+          <Title text={capitalizeAll(title)} marginBottom="8px" />
+          <Subtitle text={capitalizeAll(subtitle)}/>
           <Description>{paragraph1}</Description>
           <Description>{paragraph2}</Description>
           <Description>{paragraph3}</Description>
 
-          <LinksRow>
-            {links.map((link) => (
-              <ButtonLink key={link.href} {...link} />
-            ))}
-          </LinksRow>
+          <LinksRow/>
         </ContentWrapper>
       </ContentPanel>
     </>
   );
 };
 
-HistoriaBanner.propTypes = {
+PageSplitAtendimento.propTypes = {
   title: PropTypes.string.isRequired,
+  subtitletitle: PropTypes.string.isRequired,
   paragraph1: PropTypes.string.isRequired,
   paragraph2: PropTypes.string.isRequired,
   paragraph3: PropTypes.string.isRequired,
-  links: PropTypes.arrayOf(
-    PropTypes.shape({
-      title: PropTypes.string.isRequired,
-      href: PropTypes.string.isRequired,
-    })
-  ),
 };

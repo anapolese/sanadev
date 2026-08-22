@@ -6,13 +6,17 @@ import {
   BannerSection,
   BannerSubtitle,
   BannerTitle,
+  ImgArea,
 } from "./styles";
 import { capitalizeAll } from "../../utils/utils";
+import Estrela from "../../assets/images/estrela.png";
 
 export const WelcomeBanner = ({ title, subtitle, links = [] }) => {
+  const imgDescription = "Estrela Sana.";
   return (
     <BannerSection id="welcome-banner">
       <BannerContainer id="banner-container">
+        <ImgArea src={Estrela} alt={imgDescription} />
         <BannerTitle id="banner-title">{capitalizeAll(title)}</BannerTitle>
         <BannerSubtitle id="banner-subtitle">{subtitle}</BannerSubtitle>
         <BannerLinks id="banner-links">

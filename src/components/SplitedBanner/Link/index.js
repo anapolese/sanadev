@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
-import { BtnContainer, ButtonLink as Link } from "./styles";
+import { BtnContainer, ButtonLink as Link, ImgArea } from "./styles";
+import Estrela from "../../../assets/images/brilhar.png";
 
 export const ButtonLink = ({ 
   href,
@@ -16,8 +17,8 @@ export const ButtonLink = ({
         href={href}
         width={width}
       >
-        <img src={img} alt={imgDescription} />
         {title}
+        <ImgArea src={Estrela} alt={imgDescription} />
       </Link>
     </BtnContainer>
   );
