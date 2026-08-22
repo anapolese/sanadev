@@ -5,6 +5,10 @@ export const BtnContainer = styled.div`
   width: 200px;
 `;
 
+export const ImgArea = styled.img`
+  width: 19px;
+`;
+
 export const ButtonLink = styled.a`
   display: flex;
   flex-direction: column;
@@ -15,6 +19,7 @@ export const ButtonLink = styled.a`
   text-decoration: none;
   font-size: 24px;
   font-weight: 400;
+  width: 175px;
 
   &:hover,
   &.nav-link-active {
