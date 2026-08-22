@@ -1,4 +1,5 @@
-import { ButtonLink } from "../Link";
+import PropTypes from "prop-types";
+import { ButtonLink } from "./Link";
 import {
   BannerContainer,
   BannerLinks,
@@ -6,33 +7,31 @@ import {
   BannerSubtitle,
   BannerTitle,
 } from "./styles";
+import { capitalizeAll } from "../../utils/utils";
 
-export const WelcomeBanner = () => {
-  const title = "uma experiência sensorial e terapêutica de corpo e alma";
-  const subtitle = "O cuidado começa quando você se escolhe.";
-  const links = [
-    { title: "TRATAMENTOS", href: "#tratamentos" },
-    { title: "ATENDIMENTO", href: "#atendimento" },
-  ];
-
-  const capitalizeAll = (text) => (typeof text === "string" ? text.toUpperCase() : text);
-
+export const WelcomeBanner = ({ title, subtitle, links = [] }) => {
   return (
     <BannerSection id="welcome-banner">
       <BannerContainer id="banner-container">
         <BannerTitle id="banner-title">{capitalizeAll(title)}</BannerTitle>
-        <BannerSubtitle id="banner-subtitle">
-          {subtitle}
-        </BannerSubtitle>
+        <BannerSubtitle id="banner-subtitle">{subtitle}</BannerSubtitle>
         <BannerLinks id="banner-links">
-          {links.map((links) => (
-            <ButtonLink
-              key={links.href}
-              {...links}
-            />
+          {links.map((link) => (
+            <ButtonLink key={link.href} {...link} />
           ))}
         </BannerLinks>
       </BannerContainer>
     </BannerSection>
   );
+};
+
+WelcomeBanner.propTypes = {
+  title: PropTypes.string.isRequired,
+  subtitle: PropTypes.string.isRequired,
+  links: PropTypes.arrayOf(
+    PropTypes.shape({
+      title: PropTypes.string.isRequired,
+      href: PropTypes.string.isRequired,
+    })
+  ),
 };

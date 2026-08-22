@@ -1,3 +1,5 @@
+import { css } from 'styled-components';
+
 const breakpoints = {
   xsMax: '479px',
   smMin: '480px',
@@ -20,7 +22,7 @@ const SANAMainQueries = {
 };
 
 export const xs = rules => (
-  `
+  css`
     @media ${SANAMainQueries.mediaQueries.xs} {
       ${rules}
     }
@@ -28,7 +30,7 @@ export const xs = rules => (
 );
 
 export const sm = rules => (
-  `
+  css`
     @media ${SANAMainQueries.mediaQueries.sm} {
       ${rules}
     }
@@ -36,7 +38,7 @@ export const sm = rules => (
 );
 
 export const md = rules => (
-  `
+  css`
     @media ${SANAMainQueries.mediaQueries.md} {
       ${rules}
     }
@@ -44,7 +46,7 @@ export const md = rules => (
 );
 
 export const lg = rules => (
-  `
+  css`
     @media ${SANAMainQueries.mediaQueries.lg} {
       ${rules}
     }
@@ -52,7 +54,7 @@ export const lg = rules => (
 );
 
 export const xl = rules => (
-  `
+  css`
     @media ${SANAMainQueries.mediaQueries.xl} {
       ${rules}
     }
@@ -60,7 +62,7 @@ export const xl = rules => (
 );
 
 export const xxl = rules => (
-  `
+  css`
     @media ${SANAMainQueries.mediaQueries.xxl} {
       ${rules}
     }

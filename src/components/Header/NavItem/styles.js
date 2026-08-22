@@ -1,13 +1,24 @@
 import styled from "styled-components";
+import * as mixins from '../../../styles/mixins';
 
 const Container = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 235px;
+  width: 120px;
   height: 35px;
-  min-width: 235px;
-  max-width: 235px;
+
+  ${mixins.lg(`
+    width: 153px;
+  `)}
+
+  ${mixins.xl(`
+    width: 165px;
+  `)}
+
+  ${mixins.xxl(`
+    width: 175px;
+  `)}
 `;
 
 const NavigationLink = styled.a`
@@ -16,7 +27,7 @@ const NavigationLink = styled.a`
   align-items: center;
   color: ${({ theme }) => theme.colors.dark.brown0};
   text-decoration: none;
-  font-size: 24px;
+  font-size: 18px;
   font-weight: 400;
   line-height: 1.2;
 
@@ -28,6 +39,13 @@ const NavigationLink = styled.a`
       opacity: 1;
     }
   }
+  ${mixins.lg(`
+    font-size: 22px;
+  `)}
+
+  ${mixins.xl(`
+    font-size: 24px;
+  `)}
 `;
 
 const Underline = styled.span`
