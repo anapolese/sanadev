@@ -7,12 +7,32 @@ export const NavLink = ({
   onClickHandler,
   title,
   }) => {
+  const handleClick = (event) => {
+    if (!href.startsWith("#")) {
+      onClickHandler?.(event);
+      return;
+    }
+
+    const target = document.getElementById(href.slice(1));
+
+    if (!target) {
+      onClickHandler?.(event);
+      return;
+    }
+
+    event.preventDefault();
+    onClickHandler?.(event);
+    target.scrollIntoView({ behavior: "smooth", block: "start" });
+    window.history.pushState(null, "", href);
+  };
+
   return (
     <Container id={`container-${title}`}>
       <NavigationLink
-        onClick={onClickHandler}
+        onClick={handleClick}
         href={href}
-        className={`nav-link-${active ? "active" : ""}`}
+        className={active ? "nav-link-active" : ""}
+        aria-current={active ? "page" : undefined}
       >
         {title}
         <Underline className="underline" />

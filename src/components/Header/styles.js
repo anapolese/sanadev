@@ -13,6 +13,14 @@ const NavBar = styled.nav`
 `;
 
 const PageHeader = styled.header`
+  --header-height: 180px;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -20,14 +28,24 @@ const PageHeader = styled.header`
   width: 100%;
   margin: 0 auto;
   box-sizing: border-box;
-  min-height: 100px;
+  height: ${({ compact }) => (compact ? "var(--header-height-compact)" : "var(--header-height)")};
+  background: ${({ compact }) => (compact ? "rgba(242, 225, 211, 0.38)" : "transparent")};
+  box-shadow: ${({ compact }) => (compact ? "0 2px 7px rgba(255, 199, 153)" : "none")};
+  backdrop-filter: ${({ compact }) => (compact ? "blur(6px)" : "none")};
+  transition: height 0.25s ease, background 0.25s ease, box-shadow 0.25s ease, backdrop-filter 0.25s ease;
 
   ${mixins.md(`
-    height: 140px;
+    --header-height-compact: 90px;
+    --header-height: 150px;
   `)}
 
   ${mixins.lg(`
-    height: 180px;
+    --header-height: 180px;
+  `)}
+
+  ${mixins.xxl(`
+    --header-height-compact: 95px;
+    --header-height: 180px;
   `)}
 `;
 

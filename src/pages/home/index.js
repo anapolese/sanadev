@@ -1,12 +1,35 @@
-import GridContainer from '../../components/GridContainer';
-import { Header } from '../../components/Header';
+import PropTypes from 'prop-types';
+import { HomeContainer } from './styles';
 import { WelcomeBanner } from '../../components/WelcomeBanner';
 
-export const Home = ( props ) => (
-  <GridContainer>
-    <Header />
-    <WelcomeBanner />
-  </GridContainer>
-);
+export const Home = () => {
+  const title = "uma experiência sensorial e terapêutica de corpo e alma";
+  const subtitle = "O cuidado começa quando você se escolhe.";
+  const links = [
+    { title: "TRATAMENTOS", href: "#tratamentos" },
+    { title: "ATENDIMENTO", href: "#atendimento" },
+  ];
+
+  return (
+    <HomeContainer id="home">
+      <WelcomeBanner 
+        title={title}
+        subtitle={subtitle}
+        links={links}
+      />
+    </HomeContainer>
+  );
+};
+
+Home.propTypes = {
+  title: PropTypes.string,
+  subtitle: PropTypes.string,
+  links: PropTypes.arrayOf(
+    PropTypes.shape({
+      title: PropTypes.string.isRequired,
+      href: PropTypes.string.isRequired,
+    })
+  ),
+};
 
 export default Home;

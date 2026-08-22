@@ -19,12 +19,12 @@ const BannerLinks = styled.div`
 `;
 
 const BannerSection = styled.section`
-  min-height: 70vh;
   width: 100%;
   grid-column: 1 / -1;
   display: flex;
   align-items: center;
   justify-content: center;
+  min-height: 500px;
   padding: 40px;
 `;
 
