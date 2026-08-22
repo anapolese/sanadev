@@ -1,6 +1,11 @@
+import { LoaderWidgetContainer, LogoImg } from "./styles";
+import Logo from "../../assets/images/dark-logo-2.png";
+
 function LoaderWidget() {
 	return (
-		<div className="LoaderWidget" role="status" aria-label="Loading" />
+		<LoaderWidgetContainer role="status" aria-label="Loading">
+			<LogoImg src={Logo} alt="Sana Logo" />
+		</LoaderWidgetContainer>
 	);
 }
 

@@ -39,7 +39,7 @@ export const Description = styled.p`
   margin: 0;
   color: ${({ theme }) => theme.colors.dark.brown2};
   font-family: ${({ theme }) => theme.fonts.description};
-  font-size: 26px;
+  font-size: 23px;
   line-height: 1.2;
 `;
 
