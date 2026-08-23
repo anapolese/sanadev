@@ -3,8 +3,6 @@ import WhatsAppIcon from "../../assets/images/WhatsApp/GreenWhatsApp.png";
 import { ButtonLink as Link, Container } from "./styles";
 
 export const WhatsAppLink = ({ 
-  href,
-  img,
   onClickHandler,
   }) => {
   return (
@@ -21,8 +19,6 @@ export const WhatsAppLink = ({
 };
 
 WhatsAppLink.propTypes = {
-  href: PropTypes.string.isRequired,
-  img: PropTypes.string,
   onClickHandler: PropTypes.func,
 };
 

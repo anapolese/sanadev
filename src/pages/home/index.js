@@ -5,6 +5,7 @@ import { WelcomeBanner } from '../../components/WelcomeBanner';
 export const Home = () => {
   const title = "uma experiência sensorial e terapêutica de corpo e alma";
   const subtitle = "O cuidado começa quando você se escolhe.";
+
   const links = [
     { title: "TRATAMENTOS", href: "#tratamentos" },
     { title: "ATENDIMENTO", href: "#atendimento" },
