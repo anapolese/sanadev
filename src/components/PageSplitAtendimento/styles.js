@@ -1,24 +1,26 @@
 import styled from "styled-components";
 
 export const ImagePanel = styled.div`
-  max-height: 100vh;
-  min-height: 100vh;
+  max-height: 90vh;
+  max-width: 900px;
+  min-height: 90vh;
   border-radius: 5px;
   box-sizing: border-box;
+  margin: 50px 0 0 45px;
 `;
 
 export const ImageArea = styled.img`
-  width: 100%;
+  width: 90%;
   height: 100%;
   object-fit: cover;
-  border-radius: 0px 15px 15px 0px;
+  border-radius: 15px;
 `;
 
 export const ContentPanel = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 64px 48px;
+  padding: 55px 48px 64px 48px;
   max-width: 700px;
 `;
 
@@ -33,18 +35,26 @@ export const ContentWrapper = styled.div`
 
 export const Description = styled.p`
   margin: 0;
-  color: ${({ theme }) => theme.colors.dark.brown2};
+  color: ${({ theme }) => theme.colors.dark.brown3};
   font-family: ${({ theme }) => theme.fonts.description};
-  font-size: 23px;
+  font-size: 20px;
   line-height: 1.2;
   width: 600px;
+`;
+
+export const Address = styled.p`
+  margin: 0;
+  color: ${({ theme }) => theme.colors.dark.brown0};
+  font-family: ${({ theme }) => theme.fonts.atendimento};
+  font-size: 23px;
+  line-height: 1.2;
+  width: 300px;
 `;
 
 export const LinksRow = styled.div`
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  gap: 15px;
-  margin-top: 40px;
+  justify-content: space-between;
+  margin-top: 20px;
 `;

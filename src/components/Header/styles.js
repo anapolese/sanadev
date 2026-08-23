@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import * as mixins from '../../styles/mixins';
+import * as mixins from "../../styles/mixins";
 
 const NavBar = styled.nav`
   display: flex;

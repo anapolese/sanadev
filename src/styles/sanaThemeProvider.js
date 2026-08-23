@@ -65,6 +65,12 @@ const GlobalStyle = createGlobalStyle `
     box-sizing: border-box;
     padding: 0;
   }
+  
+  html {
+    margin: 0; padding: 0; width: 100%;
+    height: 100%;
+    overflow-x: hidden !important;
+  }
 
   body {
     overflow-x: hidden;
@@ -84,6 +90,7 @@ const theme = {
       beige3: '#FFD3AC',
       beige4: '#F5CBA5',
       beige5: '#FFC799',
+      beigeBox: '#FFE0C7',
     },
     dark: {
       brown0: '#823A00',

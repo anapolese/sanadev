@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import * as mixins from "../../styles/mixins";
 
 export const BannerContainer = styled.div`
   width: 100%;
@@ -16,6 +17,21 @@ export const BannerLinks = styled.div`
   justify-content: center;
   gap: 100px;
   margin-top: 24px;
+
+  ${mixins.xs(`
+    font-size: 20px;
+    margin-top: 0;
+  `)}
+
+  ${mixins.sm(`
+    font-size: 20px;
+    margin-top: 0;
+  `)}
+
+  ${mixins.md(`
+    font-size: 24px;
+    margin-top: 15px;
+  `)}
 `;
 
 export const BannerSection = styled.section`
@@ -31,9 +47,21 @@ export const BannerSection = styled.section`
 export const BannerSubtitle = styled.p`
   margin: 12px 0 0;
   font-family: ${({ theme }) => theme.fonts.tertiary};
-  font-size: 21px;
+  font-size: 26px;
   font-weight: 300;
   line-height: 1.3;
+
+  ${mixins.xs(`
+    font-size: 20px;
+  `)}
+
+  ${mixins.sm(`
+    font-size: 20px;
+  `)}
+
+  ${mixins.md(`
+    font-size: 24px;
+  `)}
 `;
 
 export const BannerTitle = styled.h1`
@@ -44,6 +72,18 @@ export const BannerTitle = styled.h1`
   font-weight: 200;
   line-height: 1.2;
   white-space: normal;
+
+  ${mixins.xs(`
+    font-size: 26px;
+  `)}
+
+  ${mixins.sm(`
+    font-size: 26px;
+  `)}
+
+  ${mixins.md(`
+    font-size: 29px;
+  `)}
 `;
 
 export const ImgArea = styled.img`
