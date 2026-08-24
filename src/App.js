@@ -49,7 +49,7 @@ function App() {
   }
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/sanadev">
       <Routes>
         <Route
           path="/tratamentos/detalhes/*"
