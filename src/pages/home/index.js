@@ -3,17 +3,17 @@ import { PageContainer } from '../../components/Container';
 import { WelcomeBanner } from '../../components/WelcomeBanner';
 
 export const Home = () => {
-  const title = "uma experiência sensorial e terapêutica de corpo e alma";
-  const subtitle = "O cuidado começa quando você se escolhe.";
+  const title = 'uma experiência sensorial e terapêutica de corpo e alma';
+  const subtitle = 'O cuidado começa quando você se escolhe.';
 
   const links = [
-    { title: "TRATAMENTOS", href: "#tratamentos" },
-    { title: "ATENDIMENTO", href: "#atendimento" },
+    { title: 'TRATAMENTOS', href: '#tratamentos' },
+    { title: 'ATENDIMENTO', href: '#atendimento' },
   ];
 
   return (
     <PageContainer id="home">
-      <WelcomeBanner 
+      <WelcomeBanner
         title={title}
         subtitle={subtitle}
         links={links}

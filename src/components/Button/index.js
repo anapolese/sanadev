@@ -2,16 +2,20 @@ import PropTypes from 'prop-types';
 import { Button as Btn } from './styles';
 
 export const Button = ({
+  href,
   id,
-  text,
   marginBottom,
+  padding,
+  text,
   }) => {
   return (
     <Btn
-      href="https://wa.me/5551995492876"
-      target="_blank"
-      id={id} 
+      href={href ? href : 'https://wa.me/5551995492876'}
+      target={href?.startsWith('http') ? '_blank' : undefined}
+      rel={href?.startsWith('http') ? 'noreferrer' : undefined}
+      id={id}
       marginBottom={marginBottom}
+      padding={padding}
     >
       {text}
     </Btn>
@@ -19,7 +23,9 @@ export const Button = ({
 };
 
 Button.propTypes = {
+  href: PropTypes.string,
   id: PropTypes.string,
-  text: PropTypes.string.isRequired,
   marginBottom: PropTypes.string,
+  padding: PropTypes.string,
+  text: PropTypes.string.isRequired,
 };

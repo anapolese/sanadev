@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import * as mixins from "../../styles/mixins";
+import styled from 'styled-components';
+import * as mixins from '../../styles/mixins';
 
 export const BannerContainer = styled.div`
   width: 100%;
@@ -14,24 +14,10 @@ export const BannerContainer = styled.div`
 export const BannerLinks = styled.div`
   display: flex;
   align-items: center;
+  flex-direction: row;
   justify-content: center;
   gap: 100px;
-  margin-top: 24px;
-
-  ${mixins.xs(`
-    font-size: 20px;
-    margin-top: 0;
-  `)}
-
-  ${mixins.sm(`
-    font-size: 20px;
-    margin-top: 0;
-  `)}
-
-  ${mixins.md(`
-    font-size: 24px;
-    margin-top: 15px;
-  `)}
+  margin-top: 0;
 `;
 
 export const BannerSection = styled.section`

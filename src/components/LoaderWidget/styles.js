@@ -1,4 +1,4 @@
-import styled, { keyframes } from "styled-components";
+import styled, { keyframes } from 'styled-components';
 
 const smoothBlink = keyframes`
   0%, 100% { opacity: 1; width: 120px; }
@@ -6,15 +6,11 @@ const smoothBlink = keyframes`
 `;
 
 export const LoaderWidgetContainer = styled.div`
-  position: fixed;
-  inset: 0;
-  z-index: 2000;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100vw;
   height: 100vh;
-  background: #ffe3cc;
 `;
 
 export const LogoImg = styled.img`

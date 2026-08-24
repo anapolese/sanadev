@@ -9,7 +9,7 @@ module.exports = (_, argv) => ({
     path: path.resolve(__dirname, 'build'),
     filename: 'static/js/[name].[contenthash:8].js',
     assetModuleFilename: 'static/media/[name].[contenthash:8][ext][query]',
-    publicPath: 'auto',
+    publicPath: '/',
     clean: true,
   },
   devtool: argv.mode === 'production' ? 'source-map' : 'eval-source-map',

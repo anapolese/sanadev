@@ -1,7 +1,7 @@
 import { css } from 'styled-components';
 
 const breakpoints = {
-  xsMax: '480px',
+  xsMax: '479px',
   smMin: '480px',
   mdMin: '768px',
   lgMin: '1024px',
@@ -18,7 +18,7 @@ const SANAMainQueries = {
     lg: `(min-width: ${breakpoints.lgMin})`,
     xl: `(min-width: ${breakpoints.xlMin})`,
     xxl: `(min-width: ${breakpoints.xxlMin})`,
-  }
+  },
 };
 
 export const mobile = rules => (

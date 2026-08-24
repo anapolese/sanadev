@@ -1,14 +1,15 @@
-import PropTypes from "prop-types";
-import { NavLink } from "../NavItem";
-import { NavGroupContainer } from "./styles";
+import PropTypes from 'prop-types';
+import { NavLink } from '../NavItem';
+import { NavGroupContainer } from './styles';
 
 export const NavGroup = ({
   links,
   activeTitle,
   onItemClick,
+  mobile = false,
   }) => {
   return (
-    <NavGroupContainer id="nav-group-container" className="nav-group">
+    <NavGroupContainer id="nav-group-container" className="nav-group" $mobile={mobile}>
       {links.map((link) => (
         <NavLink
           key={link.href}
@@ -31,4 +32,5 @@ NavGroup.propTypes = {
   ).isRequired,
   activeTitle: PropTypes.string,
   onItemClick: PropTypes.func,
+  mobile: PropTypes.bool,
 };

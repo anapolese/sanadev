@@ -1,7 +1,7 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 import * as mixins from '../../../styles/mixins';
 
-const Container = styled.div`
+export const Container = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -21,7 +21,7 @@ const Container = styled.div`
   `)}
 `;
 
-const NavigationLink = styled.a`
+export const NavigationLink = styled.a`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -48,7 +48,7 @@ const NavigationLink = styled.a`
   `)}
 `;
 
-const Underline = styled.span`
+export const Underline = styled.span`
   display: block;
   width: 15px;
   height: 3px;
@@ -57,5 +57,3 @@ const Underline = styled.span`
   transition: opacity 0.2s ease;
   filter: drop-shadow(0px 2px 4px rgba(31, 29, 28, 0.63));
 `;
-
-export { Container, NavigationLink, Underline };

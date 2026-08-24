@@ -6,6 +6,7 @@ import BellotaRegular from '../assets/fonts/BellotaText-Regular.ttf';
 import BebasNeue from '../assets/fonts/BebasNeue-Regular.ttf';
 import Akshar from '../assets/fonts/Akshar-VariableFont_wght.ttf';
 import { ThemeProvider, createGlobalStyle } from 'styled-components';
+import PropTypes from 'prop-types';
 
 // global
 const GlobalStyle = createGlobalStyle `
@@ -73,7 +74,6 @@ const GlobalStyle = createGlobalStyle `
   }
 
   body {
-    zoom: 1;
     overflow-x: hidden;
     scroll-behavior: smooth;
     font-family: 'Alatsi', sans-serif;
@@ -109,8 +109,7 @@ const theme = {
     tertiary: "'Bellota Text', sans-serif",
     atendimento: "'Bebas Neue', sans-serif",
     variable: "'Akshar', sans-serif",
-
-  }
+  },
 };
 
 export function SANAThemeProvider({ children }) {
@@ -121,3 +120,7 @@ export function SANAThemeProvider({ children }) {
     </ThemeProvider>
   );
 }
+
+SANAThemeProvider.propTypes = {
+  children: PropTypes.node,
+};

@@ -1,5 +1,5 @@
-import { LoaderWidgetContainer, LogoImg } from "./styles";
-import Logo from "../../assets/images/dark-logo-2.png";
+import { LoaderWidgetContainer, LogoImg } from './styles';
+import Logo from '../../assets/images/dark-logo-2.png';
 
 function LoaderWidget() {
 	return (

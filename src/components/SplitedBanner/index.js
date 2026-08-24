@@ -40,6 +40,7 @@ export const SplitedBanner = ({
 };
 
 SplitedBanner.propTypes = {
+  imgDescription: PropTypes.string.isRequired,
   text: PropTypes.string.isRequired,
   paragraph1: PropTypes.string.isRequired,
   paragraph2: PropTypes.string.isRequired,

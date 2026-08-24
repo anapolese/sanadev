@@ -1,5 +1,5 @@
-import PropTypes from "prop-types";
-import { ButtonLink } from "./Link";
+import PropTypes from 'prop-types';
+import { ButtonLink } from './Link';
 import {
   BannerContainer,
   BannerLinks,
@@ -7,12 +7,12 @@ import {
   BannerSubtitle,
   BannerTitle,
   ImgArea,
-} from "./styles";
-import { capitalizeAll } from "../../utils/utils";
-import Estrela from "../../assets/images/estrela.png";
+} from './styles';
+import { capitalizeAll } from '../../utils/utils';
+import Estrela from '../../assets/images/estrela.png';
 
 export const WelcomeBanner = ({ title, subtitle, links = [] }) => {
-  const imgDescription = "Estrela Sana.";
+  const imgDescription = 'Estrela Sana.';
   return (
     <BannerSection id="welcome-banner">
       <BannerContainer id="banner-container">

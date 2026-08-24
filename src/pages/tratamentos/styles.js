@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 import * as mixins from '../../styles/mixins';
 
 export const Container = styled.div`
