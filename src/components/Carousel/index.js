@@ -1,6 +1,6 @@
-import PropTypes from "prop-types";
-import AliceCarousel from "react-alice-carousel";
-import { CarouselContainer } from "./styles";
+import PropTypes from 'prop-types';
+import AliceCarousel from 'react-alice-carousel';
+import { CarouselContainer } from './styles';
 
 export const Carousel = ({
   items,
@@ -8,15 +8,16 @@ export const Carousel = ({
 }) => {
   const responsive = {
     0: { items: 1 },
-    768: { items: 2 },
+    600: { items: 2 },
     1024: { items: 3 },
-  }; 
-  
+  };
+
   return (
     <CarouselContainer>
       <AliceCarousel
         items={items}
         responsive={responsive}
+        infinite={false}
         controlsStrategy="alternate"
         mouseTracking
         disableButtonsControls={false}

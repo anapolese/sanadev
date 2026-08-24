@@ -1,7 +1,7 @@
-import styled from "styled-components";
-import * as mixins from "../../styles/mixins";
+import styled from 'styled-components';
+import * as mixins from '../../styles/mixins';
 
-const NavBar = styled.nav`
+export const NavBar = styled.nav`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -18,7 +18,7 @@ const NavBar = styled.nav`
   `)}
 `;
 
-const MenuButton = styled.button`
+export const MenuButton = styled.button`
   position: absolute;
   left: 16px;
   top: 50%;
@@ -34,6 +34,16 @@ const MenuButton = styled.button`
   color: ${({ theme }) => theme.colors.dark.brown0};
   transform: translateY(-50%);
   cursor: pointer;
+  z-index: 2;
+
+  &:hover {
+    box-shadow: 0 4px 10px rgba(53, 24, 0, 0.14)
+  }
+
+  ${mixins.sm(`
+    width: 35px;
+    height: 35px;
+  `)}
 
   ${mixins.md(`
     display: none;
@@ -52,7 +62,7 @@ const MenuButton = styled.button`
   `)}
 `;
 
-const MenuIcon = styled.span`
+export const MenuIcon = styled.span`
   width: 15px;
   height: 10px;
   border-top: 2px solid currentColor;
@@ -60,7 +70,7 @@ const MenuIcon = styled.span`
   position: relative;
 
   &::after {
-    content: "";
+    content: '';
     position: absolute;
     top: 2px;
     left: 0;
@@ -69,36 +79,66 @@ const MenuIcon = styled.span`
   }
 `;
 
-const MobileMenu = styled.div`
+export const MenuCloseButton = styled.button`
+  align-self: flex-end;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: ${({ theme }) => theme.colors.dark.brown0};
+  font-size: 32px;
+  line-height: 1;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+`;
+
+export const MobileMenu = styled.div`
   display: none;
+  z-index: 3;
 
-  ${mixins.mobile(`
+  @media (max-width: 767px) {
     position: absolute;
-    top: 100%;
-    left: 16px;
-    right: 16px;
-    display: ${({ open }) => (open ? "flex" : "none")};
+    width: 80vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    display: ${({ open }) => (open ? 'flex' : 'none')};
     flex-direction: column;
-    gap: 14px;
     padding: 18px;
-    background: rgba(255, 227, 204, 0.97);
-    box-shadow: 0 4px 10px rgba(53, 24, 0, 0.14);
+    background: ${({ theme }) => theme.colors.light.beige0};
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 
+    .nav-group-container {
+      align-items: flex-start;
+      width: 100%;
+    }
+     
+    a {
+      align-items: flex-start;
+    }
+    
     .nav-group {
       display: flex;
       flex-direction: column;
-      gap: 14px;
+      align-items: flex-start;
       width: 100%;
     }
-  `)}
+  }
 `;
 
-const PageHeader = styled.header`
+export const PageHeader = styled.header`
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  z-index: 1000;
+  z-index: 3;
 
   display: flex;
   justify-content: center;
@@ -107,10 +147,10 @@ const PageHeader = styled.header`
   width: 100%;
   margin: 0 auto;
   box-sizing: border-box;
-  height: ${({ compact }) => (compact ? "var(--header-height-compact)" : "var(--header-height)")};
-  background: ${({ compact }) => (compact ? "rgba(242, 225, 211, 0.38)" : "transparent")};
-  box-shadow: ${({ compact }) => (compact ? "0 2px 7px rgba(255, 199, 153)" : "none")};
-  backdrop-filter: ${({ compact }) => (compact ? "blur(6px)" : "none")};
+  height: ${({ compact }) => (compact ? 'var(--header-height-compact)' : 'var(--header-height)')};
+  background: ${({ compact }) => (compact ? 'rgba(242, 225, 211, 0.38)' : 'transparent')};
+  box-shadow: ${({ compact }) => (compact ? '0 2px 7px rgba(255, 199, 153)' : 'none')};
+  backdrop-filter: ${({ compact }) => (compact ? 'blur(6px)' : 'none')};
   transition: height 0.25s ease, background 0.25s ease, box-shadow 0.25s ease, backdrop-filter 0.25s ease;
 
   ${mixins.md(`
@@ -127,5 +167,3 @@ const PageHeader = styled.header`
     --header-height: 180px;
   `)}
 `;
-
-export { MenuButton, MenuIcon, MobileMenu, NavBar, PageHeader };

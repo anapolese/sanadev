@@ -1,10 +1,11 @@
-import Logo from "../../../assets/images/dark-logo-2.png";
 import {
   Container,
   LogoIcon,
   LogoText,
   NavigationLink,
-} from "./styles";
+} from './styles';
+import Logo from '../../../assets/images/dark-logo-2.png';
+import PropTypes from 'prop-types';
 
 export const LogoArea = ({ compact = false }) => {
   return (
@@ -15,4 +16,8 @@ export const LogoArea = ({ compact = false }) => {
       </NavigationLink>
     </Container>
   );
+};
+
+LogoArea.propTypes = {
+  compact: PropTypes.bool,
 };

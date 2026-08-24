@@ -1,27 +1,27 @@
-import PropTypes from "prop-types";
-import { ButtonLink as Link } from "./styles";
+import PropTypes from 'prop-types';
+import { ButtonContainer, ButtonLink as Link } from './styles';
 
-export const ButtonLink = ({ 
+export const ButtonLink = ({
   active = false,
   href,
   img,
   imgDescription,
   onClickHandler,
   title,
-  width
+  width,
   }) => {
   return (
-    <div>
+    <ButtonContainer>
       <img src={img} alt={imgDescription} />
       <Link
         onClick={onClickHandler}
         href={href}
-        className={`nav-link-${active ? "active" : ""}`}
+        className={`nav-link-${active ? 'active' : ''}`}
         width={width}
       >
         {title}
       </Link>
-    </div>
+    </ButtonContainer>
   );
 };
 

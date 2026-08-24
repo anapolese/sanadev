@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import Image from "../../assets/images/Image.jpg";
+import styled from 'styled-components';
+import Image from '../../assets/images/Image.jpg';
 
 export const ImagePanel = styled.div`
   min-height: 100vh;

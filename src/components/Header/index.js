@@ -1,26 +1,27 @@
-import { useEffect, useState } from "react";
-import { LogoArea } from "./LogoArea";
-import { NavGroup } from "./NavGroup";
+import { useEffect, useState } from 'react';
+import { LogoArea } from './LogoArea';
+import { NavGroup } from './NavGroup';
 import {
   MenuButton,
+  MenuCloseButton,
   MenuIcon,
   MobileMenu,
   NavBar,
   PageHeader,
-} from "./styles";
+} from './styles';
 
 const leftLinks = [
-  { title: "HOME", href: "#home", active: true },
-  { title: "HISTÓRIA", href: "#historia" },
+  { title: 'HOME', href: '#home', active: true },
+  { title: 'HISTÓRIA', href: '#historia' },
 ];
 
 const rightLinks = [
-  { title: "TRATAMENTOS", href: "#tratamentos" },
-  { title: "ATENDIMENTO", href: "#atendimento" },
+  { title: 'TRATAMENTOS', href: '#tratamentos' },
+  { title: 'ATENDIMENTO', href: '#atendimento' },
 ];
 
 export const Header = () => {
-  const [activeTitle, setActiveTitle] = useState("HOME");
+  const [activeTitle, setActiveTitle] = useState('HOME');
   const [isCompact, setIsCompact] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -53,14 +54,14 @@ export const Header = () => {
       ));
 
       if (window.location.hash !== currentSection.href) {
-        window.history.replaceState(null, "", currentSection.href);
+        window.history.replaceState(null, '', currentSection.href);
       }
     };
 
     handleScroll();
-    window.addEventListener("scroll", handleScroll, { passive: true });
+    window.addEventListener('scroll', handleScroll, { passive: true });
 
-    return () => window.removeEventListener("scroll", handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   return (
@@ -86,9 +87,17 @@ export const Header = () => {
           onItemClick={setActiveTitle}
         />
         <MobileMenu open={isMenuOpen}>
+          <MenuCloseButton
+            type="button"
+            aria-label="Fechar menu"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            ×
+          </MenuCloseButton>
           <NavGroup
             links={[...leftLinks, ...rightLinks]}
             activeTitle={activeTitle}
+            mobile
             onItemClick={(title) => {
               setActiveTitle(title);
               setIsMenuOpen(false);

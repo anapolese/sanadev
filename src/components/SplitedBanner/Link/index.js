@@ -1,14 +1,13 @@
-import PropTypes from "prop-types";
-import { BtnContainer, ButtonLink as Link, ImgArea } from "./styles";
-import Estrela from "../../../assets/images/brilhar.png";
+import PropTypes from 'prop-types';
+import { BtnContainer, ButtonLink as Link, ImgArea } from './styles';
+import Estrela from '../../../assets/images/brilhar.png';
 
-export const ButtonLink = ({ 
+export const ButtonLink = ({
   href,
-  img,
   imgDescription,
   onClickHandler,
   title,
-  width
+  width,
   }) => {
   return (
     <BtnContainer>

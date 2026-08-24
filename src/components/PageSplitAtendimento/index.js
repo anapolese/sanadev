@@ -17,12 +17,12 @@ import { Subtitle } from '../Subtitle';
 export const PageSplitAtendimento = ({
   imgDescription,
   imgSrc,
+  links = [],
   paragraph1,
   paragraph2,
   paragraph3,
   subtitle,
   title,
-  whatsapp,
   }) => {
   return (
     <>
@@ -39,7 +39,9 @@ export const PageSplitAtendimento = ({
           <Address>{paragraph3}</Address>
 
           <LinksRow>
-            <Button text={whatsapp}/>
+            {links.map((link) => (
+              <Button key={link.text} {...link}/>
+            ))}
           </LinksRow>
         </ContentWrapper>
       </ContentPanel>
@@ -48,10 +50,17 @@ export const PageSplitAtendimento = ({
 };
 
 PageSplitAtendimento.propTypes = {
-  title: PropTypes.string.isRequired,
-  subtitletitle: PropTypes.string.isRequired,
+  imgDescription: PropTypes.string.isRequired,
+  imgSrc: PropTypes.string.isRequired,
+  links: PropTypes.arrayOf(
+    PropTypes.shape({
+      text: PropTypes.string.isRequired,
+      href: PropTypes.string.isRequired,
+    })
+  ),
   paragraph1: PropTypes.string.isRequired,
   paragraph2: PropTypes.string.isRequired,
   paragraph3: PropTypes.string.isRequired,
-  whatsapp: PropTypes.string.isRequired,
+  subtitle: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
 };

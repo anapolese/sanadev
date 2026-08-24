@@ -1,8 +1,8 @@
-import PropTypes from "prop-types";
-import WhatsAppIcon from "../../assets/images/WhatsApp/GreenWhatsApp.png";
-import { ButtonLink as Link, Container } from "./styles";
+import PropTypes from 'prop-types';
+import WhatsAppIcon from '../../assets/images/WhatsApp/GreenWhatsApp.png';
+import { ButtonLink as Link, Container } from './styles';
 
-export const WhatsAppLink = ({ 
+export const WhatsAppLink = ({
   onClickHandler,
   }) => {
   return (
