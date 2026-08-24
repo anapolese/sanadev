@@ -1,8 +1,8 @@
 {
   "name": "sana",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": true,
-  "homepage": "https://anapolese.github.io/sana",
+  "homepage": "https://anapolese.github.io/sanadev",
   "dependencies": {
     "@testing-library/dom": "^10.4.1",
     "@testing-library/jest-dom": "^6.9.1",
