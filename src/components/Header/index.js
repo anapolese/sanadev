@@ -2,6 +2,9 @@ import { useEffect, useState } from "react";
 import { LogoArea } from "./LogoArea";
 import { NavGroup } from "./NavGroup";
 import {
+  MenuButton,
+  MenuIcon,
+  MobileMenu,
   NavBar,
   PageHeader,
 } from "./styles";
@@ -19,6 +22,7 @@ const rightLinks = [
 export const Header = () => {
   const [activeTitle, setActiveTitle] = useState("HOME");
   const [isCompact, setIsCompact] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
     const links = [...leftLinks, ...rightLinks];
@@ -62,6 +66,14 @@ export const Header = () => {
   return (
     <PageHeader className="site-header" compact={isCompact}>
       <NavBar className="navbar">
+        <MenuButton
+          type="button"
+          aria-label="Abrir menu"
+          aria-expanded={isMenuOpen}
+          onClick={() => setIsMenuOpen((open) => !open)}
+        >
+          <MenuIcon />
+        </MenuButton>
         <NavGroup
           links={leftLinks}
           activeTitle={activeTitle}
@@ -73,6 +85,16 @@ export const Header = () => {
           activeTitle={activeTitle}
           onItemClick={setActiveTitle}
         />
+        <MobileMenu open={isMenuOpen}>
+          <NavGroup
+            links={[...leftLinks, ...rightLinks]}
+            activeTitle={activeTitle}
+            onItemClick={(title) => {
+              setActiveTitle(title);
+              setIsMenuOpen(false);
+            }}
+          />
+        </MobileMenu>
       </NavBar>
     </PageHeader>
   );

@@ -73,6 +73,7 @@ const GlobalStyle = createGlobalStyle `
   }
 
   body {
+    zoom: 1;
     overflow-x: hidden;
     scroll-behavior: smooth;
     font-family: 'Alatsi', sans-serif;
