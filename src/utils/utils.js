@@ -12,3 +12,17 @@ export const onDomContentLoaded = (callback) => {
 
 	return () => document.removeEventListener("DOMContentLoaded", callback);
 };
+
+export const waitForPageAssets = async () => {
+	const fontsReady = document.fonts?.ready || Promise.resolve();
+	const imagesReady = Array.from(document.images).map((image) => {
+		if (image.complete) return Promise.resolve();
+
+		return new Promise((resolve) => {
+			image.addEventListener("load", resolve, { once: true });
+			image.addEventListener("error", resolve, { once: true });
+		});
+	});
+
+	await Promise.all([fontsReady, ...imagesReady]);
+};

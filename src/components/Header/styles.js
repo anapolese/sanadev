@@ -10,6 +10,87 @@ const NavBar = styled.nav`
   width: 100%;
   max-width: 1300px;
   margin: 0 auto;
+
+  ${mixins.mobile(`
+    position: relative;
+    justify-content: center;
+    padding: 0 48px;
+  `)}
+`;
+
+const MenuButton = styled.button`
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  border: 0;
+  border-radius: 6px;
+  background: #ffc493;
+  color: ${({ theme }) => theme.colors.dark.brown0};
+  transform: translateY(-50%);
+  cursor: pointer;
+
+  ${mixins.md(`
+    display: none;
+  `)}
+
+  ${mixins.lg(`
+    display: none;
+  `)}
+
+  ${mixins.xl(`
+    display: none;
+  `)}
+
+  ${mixins.xxl(`
+    display: none;
+  `)}
+`;
+
+const MenuIcon = styled.span`
+  width: 15px;
+  height: 10px;
+  border-top: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 0;
+    width: 10px;
+    border-top: 2px solid currentColor;
+  }
+`;
+
+const MobileMenu = styled.div`
+  display: none;
+
+  ${mixins.mobile(`
+    position: absolute;
+    top: 100%;
+    left: 16px;
+    right: 16px;
+    display: ${({ open }) => (open ? "flex" : "none")};
+    flex-direction: column;
+    gap: 14px;
+    padding: 18px;
+    background: rgba(255, 227, 204, 0.97);
+    box-shadow: 0 4px 10px rgba(53, 24, 0, 0.14);
+
+    .nav-group {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      width: 100%;
+    }
+  `)}
 `;
 
 const PageHeader = styled.header`
@@ -17,7 +98,7 @@ const PageHeader = styled.header`
   top: 0;
   left: 0;
   right: 0;
-  z-index: 2;
+  z-index: 1000;
 
   display: flex;
   justify-content: center;
@@ -47,4 +128,4 @@ const PageHeader = styled.header`
   `)}
 `;
 
-export { NavBar, PageHeader };
+export { MenuButton, MenuIcon, MobileMenu, NavBar, PageHeader };

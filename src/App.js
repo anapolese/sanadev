@@ -7,24 +7,28 @@ import Home from './pages/home';
 import Tratamentos from './pages/tratamentos';
 import LoaderWidget from './components/LoaderWidget';
 import WhatsAppLink from './components/WhatsAppLink';
-import { isLoading, onDomContentLoaded } from './utils/utils';
+import { waitForPageAssets } from './utils/utils';
 import './App.css';
 
 function App() {
-  const [isDomLoading, setIsDomLoading] = useState(() => isLoading());
+  const [isDomLoading, setIsDomLoading] = useState(true);
 
   useEffect(() => {
-    if (!isDomLoading) return undefined;
+    let isMounted = true;
 
-    return onDomContentLoaded(() => setIsDomLoading(false));
-  }, [isDomLoading]);
+    waitForPageAssets().then(() => {
+      if (isMounted) setIsDomLoading(false);
+    });
 
-  if (isDomLoading) {
-    return <LoaderWidget />;
-  }
+    return () => {
+      isMounted = false;
+    };
+  }, []);
 
   return (
-    <div className="Sana">
+    <>
+      {isDomLoading && <LoaderWidget />}
+      <div className="Sana" aria-hidden={isDomLoading}>
       <Header />
       <Home />
       <Historia />
@@ -32,7 +36,8 @@ function App() {
       <Atendimento />
       <Footer />
       <WhatsAppLink />
-    </div>
+      </div>
+    </>
   );
 }
 
